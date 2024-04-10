@@ -23,7 +23,7 @@ const CurrentWeather = ({ data, hourFC }) => {
             <h4>{data.main.temp}°C</h4>
             <p>{data.weather[0].description}</p>
           </div>
-          <img 
+          <img alt="weather icon"
             src={`https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`}
           />
         </div>
@@ -72,7 +72,7 @@ const CurrentWeather = ({ data, hourFC }) => {
                 return (
                   <div>
                     <p>{forcastDate}</p>
-                    <img
+                    <img alt="weather icon"
                       src={`https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`}
                     />
                     <p>{data.main.temp}°C</p>

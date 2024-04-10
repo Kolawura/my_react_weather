@@ -40,7 +40,7 @@ const Forecast = ({ data }) => {
       <div>
         <h3>{days[day]}</h3>
         <p>
-        <img className="forecastImg"
+        <img className="forecastImg" alt="weather icon"
             src={`https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`}
           />{" "}
           {data.weather[0].description}
