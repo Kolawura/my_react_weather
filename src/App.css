@@ -1,38 +1,104 @@
-.App {
-  text-align: center;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+  background: linear-gradient(90deg,rgb(0, 10, 116) 0%, rgb(69, 76, 163) 100%);
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.App{
+  height: 90vh;
+  border: rgba(248, 248, 255, 0.2) solid 1px;
+  border-radius: 2rem;
+  margin: 2rem 3rem;
+  padding: 2rem;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.weatherApp{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.currentWeather{
+  margin: 2rem 1rem 2rem 0;
+  color: #f9f9ff;
   display: flex;
   flex-direction: column;
-  align-items: center;
+}
+h3{
+  color: #f9f9ff;
+  font-weight: 600;
+  font-size: 1.2rem;
+  text-align: center;
+}
+.heading{
+  margin-bottom: 2rem;
+}
+h4{
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+p{
+  color: rgb(196, 196, 214);
+}
+.top img{
+  color: #fff;
+}
+
+.top div{
+  display: flex;
+  text-align: center;
+  padding: 0 1rem;
+  justify-content: space-between;
+}
+.top div div{
+  display: block;
+  margin: 0;
+}
+.bottom{
+  margin: 4rem 1rem 2rem 0;
+}
+.bottom div{
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
-
-.App-link {
-  color: #61dafb;
+.bottom div div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgba(94, 100, 180, 0.2);
+  border-radius: 8px;
+  margin: 3px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.bottom div div img{
+  width: 50%;
+  height: auto;
+}
+.forecast{
+padding: 3rem 0;
+}
+.forecastDay{
+  display: flex;
+  justify-content: space-between;
+  padding: .5rem .8rem;
+  background: #b2bae8;
+  margin: 4px 0;
+  background-color: rgba(94, 100, 180, 0.2);
+  border-radius: 8px;
+}
+.forecastDay div{
+  height: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.forecastDay div h3{
+  text-align: left;
+  display: inline;
+}
+.forecastImg{
+  width: 15%;
+  height: auto;
+  padding: 0;
+  margin: 0;
 }
