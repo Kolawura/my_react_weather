@@ -5,6 +5,7 @@
 }
 body{
   background: linear-gradient(90deg,rgb(0, 10, 116) 0%, rgb(69, 76, 163) 100%);
+  max-height: 100vh;
 }
 .App{
   height: 90vh;
@@ -18,7 +19,7 @@ body{
   grid-template-columns: 1fr 1fr;
 }
 .currentWeather{
-  margin: 2rem 1rem 2rem 0;
+  margin: 3rem 1rem 2rem 0;
   color: #f9f9ff;
   display: flex;
   flex-direction: column;
@@ -29,9 +30,7 @@ h3{
   font-size: 1.2rem;
   text-align: center;
 }
-.heading{
-  margin-bottom: 2rem;
-}
+
 h4{
   font-weight: 500;
   font-size: 1.1rem;
@@ -39,19 +38,28 @@ h4{
 p{
   color: rgb(196, 196, 214);
 }
-.top img{
+.top{
+  margin-bottom: 2rem;
+}
+.top img, .middle img{
   color: #fff;
 }
 
-.top div{
+.top div, .middle div{
   display: flex;
   text-align: center;
   padding: 0 1rem;
   justify-content: space-between;
 }
-.top div div{
+.top div div, .middle div div{
   display: block;
-  margin: 0;
+  align-items: center;
+}
+.top div div{
+  margin-top: 2rem;
+}
+.middle .heading{
+  margin-bottom: 2rem;
 }
 .bottom{
   margin: 4rem 1rem 2rem 0;
@@ -67,6 +75,7 @@ p{
   align-items: center;
   flex-direction: column;
   background-color: rgba(94, 100, 180, 0.2);
+  box-shadow: 5px 5px 5px rgba(22, 24, 75, 0.6);
   border-radius: 8px;
   margin: 3px;
 }
@@ -84,10 +93,11 @@ padding: 3rem 0;
   background: #b2bae8;
   margin: 4px 0;
   background-color: rgba(94, 100, 180, 0.2);
+  box-shadow: 2px 2px 2px rgba(22, 24, 75, 0.3);
   border-radius: 8px;
 }
 .forecastDay div{
-  width: 8rem;
+  width: 10rem;
   height: 4rem;
   display: flex;
   flex-direction: column;
@@ -102,4 +112,12 @@ padding: 3rem 0;
   height: auto;
   padding: 0;
   margin: 0;
+}
+footer{
+  color: #fff;
+  position: fixed;
+  text-align: center;
+  bottom: 0px;
+  right: 0;
+  left: 0;
 }

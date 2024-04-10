@@ -45,6 +45,7 @@ function App() {
       });
   };
   return (
+    <>
     <div className="App">
       <Search onSearchChange={getSearchInfo} />
       <div className="weatherApp">
@@ -58,6 +59,8 @@ function App() {
         </div>
       </div>
     </div>
+    <footer>Made with <span>❤️</span> by Kolawura</footer>
+    </>
   );
 }
 

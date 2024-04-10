@@ -28,7 +28,7 @@ const CurrentWeather = ({ data, hourFC }) => {
           />
         </div>
       </div>
-      <div className="top">
+      <div className="middle">
         <h3 className="heading">AIR CONDITIONS</h3>
         <div>
           <div>
