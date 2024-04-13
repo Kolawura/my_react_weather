@@ -4,7 +4,7 @@ const CurrentWeather = ({ data, hourFC }) => {
   //  eslint-disable-next-line
   const date = new Date();
   const day = date.getDate();
-  const month = date.toLocaleString("default", { month: "short" });
+  const month = date.toLocaleString("default", { month: "long" });
 
   return (
     <div className="currentWeather">
@@ -63,14 +63,13 @@ const CurrentWeather = ({ data, hourFC }) => {
           {
             //
             hourFC &&
-              hourFC.map((data) => {
+              hourFC.map((data, index) => {
                 const forcastDates = new Date(data.dt_txt);
                 const hours = forcastDates.getHours();
                 const minutes = forcastDates.getMinutes();
                 const forcastDate = `${hours}:${minutes}0`;
-                console.log(forcastDate);
                 return (
-                  <div>
+                  <div key={index}>
                     <p>{forcastDate}</p>
                     <img alt="weather icon"
                       src={`https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`}
